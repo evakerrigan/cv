@@ -1,5 +1,7 @@
 /******************** reset ********************/
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -17,10 +19,9 @@ h1 {
 /******************** base ********************/
 body {
   /* font-family: 'Poppins', sans-serif; */
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu',
-  'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
--webkit-font-smoothing: antialiased;
--moz-osx-font-smoothing: grayscale;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .all-wrapper {
@@ -323,11 +324,6 @@ body {
   font-size: 20px;
   line-height: 32px;
 }
-.portfolio p {
-  color: #fff;
-  font-size: 30px;
-  text-align: center;
-}
 
 @media (max-width: 1080px) {
   .content-title {
@@ -417,6 +413,17 @@ body {
 
 .portfolio-img {
   width: 100%;
+}
+
+.portfolio p {
+  color: #fff;
+  font-size: 30px;
+  text-align: center;
+}
+
+.portfolio-description {
+  color: #888;
+  padding: 10px 0 0 0;
 }
 
 /******************** footer ********************/
