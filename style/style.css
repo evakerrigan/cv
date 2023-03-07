@@ -26,7 +26,7 @@ body {
 
 .all-wrapper {
   max-width: 1280px;
-  min-width: 700px;
+  min-width: 320px;
   margin: 0 auto;
   background-color: #f2f9fb;
 }
@@ -100,6 +100,19 @@ body {
           align-items: center;
 }
 
+@media (max-width: 767px) {
+  .wrapper {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .left-block {
+    width: 100%;
+  }
+  .right-block {
+    width: 100%;
+  }
+}
+
 /******************** header ********************/
 .header {
   background-color: #171b26;
@@ -109,6 +122,10 @@ body {
 .header-img {
   max-width: 100%;
   margin: 12vh 0 0 0;
+}
+
+.photo-block {
+  display: none;
 }
 
 .header-menu-list {
@@ -211,6 +228,46 @@ body {
   }
   .header-contacts-item {
     margin: 0 0 2vh 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .header {
+    padding: 20px 0 0 0;
+  }
+  .header-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .photo-block {
+    display: block;
+  }
+  .header-img-mini {
+    width: 80%;
+    max-width: 320px;
+    margin: 0 0 0 0;
+  }
+  .header .left-block {
+    display: none;
+  }
+  .header-menu-list {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
+  .header-menu-item {
+    margin: 7px 0;
+  }
+  .header-title {
+    margin: 2vh 0 0 0;
+    line-height: 55px;
   }
 }
 
@@ -380,6 +437,21 @@ body {
   }
 }
 
+@media (max-width: 767px) {
+  .left-block {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  .left-block-strip {
+    width: 100%;
+    margin: 0;
+  }
+  .content-hobbies-item {
+    margin: 0;
+  }
+}
+
 /******************** portfolio ********************/
 .portfolio {
   background-color: #171b26;
@@ -426,6 +498,15 @@ body {
   padding: 10px 0 0 0;
 }
 
+@media (max-width: 767px) {
+  .portfolio-item {
+    width: 80%;
+  }
+  .portfolio-title {
+    line-height: 55px;
+  }
+}
+
 /******************** footer ********************/
 .footer {
   background-color: #aaa;
@@ -453,5 +534,39 @@ body {
   .footer-github-link {
     font-size: 17px;
   }
+}
+
+/******************** back-to-top ********************/
+.back-to-top {
+  position: fixed;
+  bottom: -60px;
+  right: 10px;
+  width: 50px;
+  height: 50px;
+  background-color: #f2f9fb;
+  cursor: pointer;
+  -webkit-transition: 0.4s linear;
+  transition: 0.4s linear;
+  border: 2px solid #171b26;
+  padding-top: 18px;
+}
+
+.back-to-top:hover {
+  background-color: #8b8d9b;
+}
+
+.back-to-top.active {
+  bottom: 10px;
+}
+
+.arrow {
+  width: 20px;
+  height: 20px;
+  border-top: 3px solid #171b26;
+  border-right: 3px solid #171b26;
+  margin: 0 auto;
+  text-align: center;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
 }
 /*# sourceMappingURL=style.css.map */

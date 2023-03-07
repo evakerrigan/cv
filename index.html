@@ -22,25 +22,30 @@
                     </div>
                 </div>
                 <div class="right-block">
-                    <nav class="header-menu">
-                        <ul class="header-menu-list">
-                            <li class="header-menu-item">
-                                <a class="header-menu-link" href="#contacts">Контакты</a>
-                            </li>
-                            <li class="header-menu-item">
-                                <a class="header-menu-link" href="#education">Образование</a>
-                            </li>
-                            <li class="header-menu-item">
-                                <a class="header-menu-link" href="#experience">Опыт</a>
-                            </li>
-                            <li class="header-menu-item">
-                                <a class="header-menu-link" href="#portfolio">Портфолио</a>
-                            </li>
-                            <li class="header-menu-item">
-                                <a class="header-menu-link" href="#skills">Навыки</a>
-                            </li>
-                        </ul>
-                    </nav>
+                    <div class="header-wrapper">
+                        <div class="photo-block">
+                            <img class="header-img-mini" src="image/me.jpg" alt="Photo avatar">
+                        </div>
+                        <nav class="header-menu">
+                            <ul class="header-menu-list">
+                                <li class="header-menu-item">
+                                    <a class="header-menu-link" href="#contacts">Контакты</a>
+                                </li>
+                                <li class="header-menu-item">
+                                    <a class="header-menu-link" href="#education">Образование</a>
+                                </li>
+                                <li class="header-menu-item">
+                                    <a class="header-menu-link" href="#experience">Опыт</a>
+                                </li>
+                                <li class="header-menu-item">
+                                    <a class="header-menu-link" href="#portfolio">Портфолио</a>
+                                </li>
+                                <li class="header-menu-item">
+                                    <a class="header-menu-link" href="#skills">Навыки</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
                     <h1 class="header-title">Ксения<br>Любасова</h1>
                     <div class="header-description">Frontend Developer</div>
                     <div id="contacts" class="header-contacts">
@@ -193,12 +198,14 @@
                             <li class="content-skills-item"><span>JavaScript</span></li>
                             <li class="content-skills-item"><span>TypeScript</span></li>
                             <li class="content-skills-item"><span>React</span></li>
-                            <li class="content-skills-item"><span>HTML</span></li>
-                            <li class="content-skills-item"><span>CSS</span></li>
+                            <li class="content-skills-item"><span>HTML5</span></li>
+                            <li class="content-skills-item"><span>CSS3</span></li>
                             <li class="content-skills-item"><span>Figma</span></li>
                             <li class="content-skills-item"><span>Photoshop</span></li>
                             <li class="content-skills-item"><span>GIT</span></li>
                             <li class="content-skills-item"><span>Pixel Perfect</span></li>
+                            <li class="content-skills-item"><span>Webpack</span></li>
+                            <li class="content-skills-item"><span>Scss</span></li>
                         </ul>
                     </section>
                 </div>
@@ -222,7 +229,8 @@
                             <img class="portfolio-img" src="image/2023-rs-club.jpg" alt="rs-club">
                         </a>
                         <div class="portfolio-description">
-                            <em>React, Nest, Mongo, ts, командная работа, авторизация через github, deploy на vercel</em>
+                            <em>React, Nest, Mongo, ts, командная работа, авторизация через github, deploy на
+                                vercel</em>
                         </div>
                     </li>
                 </ul>
@@ -251,7 +259,8 @@
                             <img class="portfolio-img" src="image/2022-momentum.jpg" alt="momentum">
                         </a>
                         <div class="portfolio-description">
-                            <em>js, смена языков, todo-лист, кастомный аудиоплеер, виджет погоды, время, приветствие, таймер</em>
+                            <em>js, смена языков, todo-лист, кастомный аудиоплеер, виджет погоды, время, приветствие,
+                                таймер</em>
                         </div>
                     </li>
                     <li class="portfolio-item">
@@ -407,15 +416,39 @@
                             Github</a>
                     </div>
                     <div class="footer-block">2022</div>
-                    <div class="footer-block">
-                        <a class="" href="" target="_blank">
-                            <img src="" class="" alt="">
-                        </a>
-                    </div>
                 </div>
             </div>
         </footer>
     </div>
+    <div class="back-to-top">
+        <div class="arrow"></div>
+    </div>
+    <script>
+        const btnUp = {
+            el: document.querySelector('.back-to-top'),
+            show() {
+                this.el.classList.add('active');
+            },
+            hide() {
+                this.el.classList.remove('active');
+            },
+            addEventListener() {
+                window.addEventListener('scroll', () => {
+                    // определяем величину прокрутки
+                    const scrollY = window.scrollY || document.documentElement.scrollTop;
+                    scrollY > 400 ? this.show() : this.hide();
+                });
+                document.querySelector('.back-to-top').onclick = () => {
+                    window.scrollTo({
+                        top: 0,
+                        left: 0,
+                        behavior: 'smooth'
+                    });
+                }
+            }
+        }
+        btnUp.addEventListener();
+    </script>
 </body>
 
 </html>
