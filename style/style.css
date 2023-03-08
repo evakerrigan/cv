@@ -231,6 +231,17 @@ body {
   }
 }
 
+@media (max-width: 950px) {
+  .header-menu-list {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .header-menu-item {
+    width: 30%;
+    margin: 7px 0;
+  }
+}
+
 @media (max-width: 767px) {
   .header {
     padding: 20px 0 0 0;
@@ -263,6 +274,7 @@ body {
             align-items: flex-end;
   }
   .header-menu-item {
+    width: auto;
     margin: 7px 0;
   }
   .header-title {
@@ -509,7 +521,7 @@ body {
 
 /******************** footer ********************/
 .footer {
-  background-color: #aaa;
+  background-color: #171b26;
   color: #fff;
   padding: 1vh 5%;
 }
@@ -533,6 +545,231 @@ body {
 @media (max-width: 850px) {
   .footer-github-link {
     font-size: 17px;
+  }
+}
+
+/******************** resume ********************/
+.row:before,
+.row:after {
+  display: table;
+  content: " ";
+}
+
+.row:after {
+  clear: both;
+}
+
+.row:before,
+.row:after {
+  display: table;
+  content: " ";
+}
+
+.row:after {
+  clear: both;
+}
+
+.resume {
+  background: #fff;
+}
+
+.resume p {
+  color: #a9a9a9;
+}
+
+.resume a {
+  color: #a9a9a9;
+}
+
+.resume a:hover {
+  text-decoration: none;
+}
+
+.resume a > p:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+#resume img {
+  width: 100%;
+}
+
+.b-resume {
+  color: #000;
+  background: #fff;
+  width: 100%;
+  margin: 0 auto;
+  padding: 10%;
+}
+
+.b-resume-wrapper {
+  padding: 5% 0;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.b-resume-main-title:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.b-resume-contacts {
+  margin-top: 3%;
+}
+
+.b-resume-title {
+  width: 210px;
+  float: right;
+  text-align: right;
+  font-size: 15px;
+}
+
+.b-resume-photo {
+  width: 100%;
+  padding: 5% 10%;
+}
+
+.b-resume-name {
+  padding: 24px 0 27px 0;
+  font-size: 18px;
+}
+
+.b-resume-info {
+  color: #000;
+}
+
+.b-resume-info span {
+  font-weight: 500;
+}
+
+.b-resume-info a {
+  color: #00afea;
+}
+
+.b-resume-info a:hover {
+  border-bottom: 1px solid #00afea;
+}
+
+.b-resume-education {
+  margin-top: 3%;
+}
+
+.b-resume-education li {
+  font-size: 13px;
+}
+
+.b-resume-work {
+  margin-top: 3%;
+}
+
+.b-resume-work-title span {
+  font-size: 15px;
+}
+
+.b-resume-work li {
+  font-size: 13px;
+}
+
+.b-resume-merit {
+  margin-top: 3%;
+}
+
+.b-resume-merit-title span {
+  font-size: 15px;
+}
+
+.b-resume-skills {
+  margin-top: 3%;
+}
+
+.b-resume-skills-title span {
+  font-size: 15px;
+}
+
+.b-resume-skills-title span {
+  font-size: 15px;
+}
+
+.b-resume-skills span {
+  font-size: 15px;
+}
+
+.b-resume-skills-table {
+  margin-left: 6%;
+}
+
+.b-resume-skills-table td:last-child {
+  padding-left: 40px;
+}
+
+.b-resume-contacts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: no-wrap;
+      flex-wrap: no-wrap;
+}
+
+.resume-photo {
+  max-width: 238px;
+  margin: 0 30px 30px 30px;
+}
+
+.resume-list {
+  list-style-type: none;
+}
+
+.resume-item {
+  margin: 0px 0;
+  font-size: 14px;
+  line-height: 1.428571429;
+}
+
+.resume-link {
+  text-decoration: none;
+}
+
+.resume-link:hover {
+  color: #00afea;
+}
+
+strong {
+  font-size: 14px;
+  line-height: 1.428571429;
+  font-weight: bold;
+}
+
+.resume-image {
+  display: none;
+}
+
+.resume-html {
+  display: block;
+}
+
+.button_download a {
+  padding: 9px 25px 12px 25px;
+  color: #a9a9a9;
+  display: block;
+  font-style: italic;
+}
+
+.button_download {
+  background-color: #045369;
+}
+
+.button_download a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+@media (max-width: 830px) {
+  .resume-image {
+    display: block;
+  }
+  .resume-html {
+    display: none;
   }
 }
 
