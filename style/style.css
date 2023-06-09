@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /******************** reset ********************/
 *,
 *:before,
@@ -467,7 +468,39 @@ body {
 /******************** portfolio ********************/
 .portfolio {
   background-color: #171b26;
-  padding: 2vh 5% 1vh 5%;
+  padding: 2vh 5% 2vh 5%;
+}
+
+.portfolio-button {
+  background-color: transparent;
+  cursor: pointer;
+  color: #888;
+  border: 1px solid #888;
+  outline: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin: 0 auto;
+  display: block;
+  width: 150px;
+  text-align: center;
+}
+
+.arrow.down {
+  border-top: 3px solid #888;
+  border-right: 3px solid #888;
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+.portfolio-button:hover {
+  color: #fff;
+}
+
+.portfolio-button:hover .arrow.down {
+  border-top: 3px solid #fff;
+  border-right: 3px solid #fff;
 }
 
 .portfolio-title {
@@ -487,6 +520,7 @@ body {
       justify-content: space-around;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  margin-top: 30px;
 }
 
 .portfolio-item {
@@ -801,5 +835,61 @@ strong {
   text-align: center;
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
+}
+
+.arrow.down {
+  border-top: 3px solid #888;
+  border-right: 3px solid #888;
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+}
+
+/******************** arrow-down button ********************/
+/* скрываем чекбоксы и блоки с содержанием */
+.hide,
+.hide + label ~ ul {
+  display: none;
+}
+
+/* вид текста label */
+.hide + label,
+.hide:checked + label {
+  padding: 0;
+  cursor: pointer;
+}
+
+/* вид текста label при активном переключателе */
+.hide:checked + label .portfolio-button .arrow.down {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  margin-top: 10px;
+  margin-bottom: 0px;
+}
+
+/* когда чекбокс активен показываем блоки с содержанием  */
+.hide:checked + label + ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-animation: fade ease-in 1s;
+          animation: fade ease-in 1s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 /*# sourceMappingURL=style.css.map */

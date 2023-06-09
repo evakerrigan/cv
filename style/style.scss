@@ -16,6 +16,11 @@ h1 {
   border: 0;
 }
 
+// section {
+//   display: flex;
+//   flex-flow: column;
+// }
+
 /******************** base ********************/
 
 body {
@@ -223,6 +228,7 @@ body {
     margin: 0 0 2vh 0;
   }
 }
+
 @media (max-width: 950px) {
   .header-menu-list {
     flex-wrap: wrap;
@@ -472,7 +478,38 @@ body {
 
 .portfolio {
   background-color: #171b26;
-  padding: 2vh 5% 1vh 5%;
+  padding: 2vh 5% 2vh 5%;
+}
+
+.portfolio-button {
+  background-color: transparent;
+  cursor: pointer;
+  color: #888;
+  border: 1px solid #888;
+  outline: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin: 0 auto;
+  display: block;
+  width: 150px;
+  text-align: center;
+}
+
+.arrow.down {
+  border-top: 3px solid #888;
+  border-right: 3px solid #888;
+  transform: rotate(135deg);
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+.portfolio-button:hover {
+  color: #fff;
+}
+
+.portfolio-button:hover .arrow.down {
+  border-top: 3px solid #fff;
+  border-right: 3px solid #fff;
 }
 
 .portfolio-title {
@@ -488,6 +525,7 @@ body {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+  margin-top: 30px;
 }
 
 .portfolio-item {
@@ -556,6 +594,7 @@ body {
     font-size: 17px;
   }
 }
+
 /******************** resume ********************/
 // .row {
 //   margin-right: -15px;
@@ -582,59 +621,202 @@ body {
   clear: both;
 }
 
-.resume p {color: #a9a9a9;}
-.resume a {color: #a9a9a9;}
-.resume a:hover {text-decoration: none;}
-.resume a>p:hover {color: #fff; text-decoration: none;}
-#resume img {width: 100%;}
+.resume p {
+  color: #a9a9a9;
+}
 
-.b-resume {color: #000; background: #fff; width: 100%; margin: 0 auto; padding: 10%;}
-.b-resume-wrapper {padding: 5% 0; max-width: 900px; margin: 0 auto;}
-.b-resume-main-title:after{content: ''; display: table; clear: both;}
-.b-resume-contacts {margin-top: 3%;}
-.b-resume-title {width: 210px; float: right; text-align: right; font-size: 15px;}
-.b-resume-photo {width: 100%;
-  padding: 5% 10%;}
-.b-resume-name {padding: 24px 0 27px 0; font-size: 18px;}
-.b-resume-info {color: #000;}
-.b-resume-info span {font-weight: 500;}
-.b-resume-info a {color: #00afea;}
-.b-resume-info a:hover {border-bottom: 1px solid #00afea;}
-.b-resume-education {margin-top: 3%;}
-.b-resume-education li {font-size: 13px;}
-.b-resume-work {margin-top: 3%;}
-.b-resume-work-title span {font-size: 15px;}
-.b-resume-work li {font-size: 13px;}
-.b-resume-merit {margin-top: 3%;}
-.b-resume-merit-title span {font-size: 15px;}
-.b-resume-skills {margin-top: 3%;}
-.b-resume-skills-title span {font-size: 15px;}
-.b-resume-skills-title span {font-size: 15px;}
-.b-resume-skills span {font-size: 15px;}
-.b-resume-skills-table {margin-left: 6%;}
-.b-resume-skills-table td:last-child {padding-left: 40px;}
+.resume a {
+  color: #a9a9a9;
+}
 
-.b-resume-contacts {display: flex; flex-wrap: no-wrap;}
-.resume-photo {max-width: 238px; margin: 0 30px 30px 30px;}
-.resume-list {list-style-type: none;}
-.resume-item {margin: 0px 0; font-size: 14px; line-height: 1.428571429;}
-.resume-link {text-decoration: none;}
-.resume-link:hover {color: #00afea;}
+.resume a:hover {
+  text-decoration: none;
+}
+
+.resume a>p:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+#resume img {
+  width: 100%;
+}
+
+.b-resume {
+  color: #000;
+  background: #fff;
+  width: 100%;
+  margin: 0 auto;
+  padding: 10%;
+}
+
+.b-resume-wrapper {
+  padding: 5% 0;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.b-resume-main-title:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.b-resume-contacts {
+  margin-top: 3%;
+}
+
+.b-resume-title {
+  width: 210px;
+  float: right;
+  text-align: right;
+  font-size: 15px;
+}
+
+.b-resume-photo {
+  width: 100%;
+  padding: 5% 10%;
+}
+
+.b-resume-name {
+  padding: 24px 0 27px 0;
+  font-size: 18px;
+}
+
+.b-resume-info {
+  color: #000;
+}
+
+.b-resume-info span {
+  font-weight: 500;
+}
+
+.b-resume-info a {
+  color: #00afea;
+}
+
+.b-resume-info a:hover {
+  border-bottom: 1px solid #00afea;
+}
+
+.b-resume-education {
+  margin-top: 3%;
+}
+
+.b-resume-education li {
+  font-size: 13px;
+}
+
+.b-resume-work {
+  margin-top: 3%;
+}
+
+.b-resume-work-title span {
+  font-size: 15px;
+}
+
+.b-resume-work li {
+  font-size: 13px;
+}
+
+.b-resume-merit {
+  margin-top: 3%;
+}
+
+.b-resume-merit-title span {
+  font-size: 15px;
+}
+
+.b-resume-skills {
+  margin-top: 3%;
+}
+
+.b-resume-skills-title span {
+  font-size: 15px;
+}
+
+.b-resume-skills-title span {
+  font-size: 15px;
+}
+
+.b-resume-skills span {
+  font-size: 15px;
+}
+
+.b-resume-skills-table {
+  margin-left: 6%;
+}
+
+.b-resume-skills-table td:last-child {
+  padding-left: 40px;
+}
+
+.b-resume-contacts {
+  display: flex;
+  flex-wrap: no-wrap;
+}
+
+.resume-photo {
+  max-width: 238px;
+  margin: 0 30px 30px 30px;
+}
+
+.resume-list {
+  list-style-type: none;
+}
+
+.resume-item {
+  margin: 0px 0;
+  font-size: 14px;
+  line-height: 1.428571429;
+}
+
+.resume-link {
+  text-decoration: none;
+}
+
+.resume-link:hover {
+  color: #00afea;
+}
+
 strong {
   font-size: 14px;
   line-height: 1.428571429;
   font-weight: bold;
 }
-.resume-image {display: none;}
-.resume-html {display: block;}
 
-.button_download a {padding: 9px 25px 12px 25px; color: #a9a9a9; display: block; font-style: italic;}
-.button_download {background-color: #045369;}
-.button_download a:hover {color: #fff; text-decoration: none;}
+.resume-image {
+  display: none;
+}
+
+.resume-html {
+  display: block;
+}
+
+.button_download a {
+  padding: 9px 25px 12px 25px;
+  color: #a9a9a9;
+  display: block;
+  font-style: italic;
+}
+
+.button_download {
+  background-color: #045369;
+}
+
+.button_download a:hover {
+  color: #fff;
+  text-decoration: none;
+}
 
 @media (max-width: 830px) {
-  .resume-image {display: block;}
-.resume-html {display: none;}
+  .resume-image {
+    display: block;
+  }
+
+  .resume-html {
+    display: none;
+  }
 }
 
 /******************** back-to-top ********************/
@@ -652,12 +834,15 @@ strong {
   border: 2px solid #171b26;
   padding-top: 18px;
 }
+
 .back-to-top:hover {
   background-color: #8b8d9b;
 }
+
 .back-to-top.active {
   bottom: 10px;
 }
+
 .arrow {
   width: 20px;
   height: 20px;
@@ -666,4 +851,49 @@ strong {
   margin: 0 auto;
   text-align: center;
   transform: rotate(-45deg);
+}
+
+.arrow.down {
+  border-top: 3px solid #888;
+  border-right: 3px solid #888;
+  transform: rotate(135deg);
+}
+
+/******************** arrow-down button ********************/
+
+/* скрываем чекбоксы и блоки с содержанием */
+.hide,
+.hide+label~ul {
+  display: none;
+}
+
+/* вид текста label */
+.hide+label,
+.hide:checked+label {
+  padding: 0;
+  cursor: pointer;
+}
+
+/* вид текста label при активном переключателе */
+.hide:checked+label .portfolio-button .arrow.down {
+  transform: rotate(-45deg);
+  margin-top: 10px;
+  margin-bottom: 0px;
+}
+
+/* когда чекбокс активен показываем блоки с содержанием  */
+.hide:checked+label+ul {
+  display: flex;
+  animation: fade ease-in 1s;
+  // transform: translateY(100%);
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
