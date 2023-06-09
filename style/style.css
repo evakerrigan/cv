@@ -311,20 +311,20 @@ body {
 }
 
 .content-hobbies-item {
-  font-weight: 500;
+  font-weight: 400;
   font-size: 20px;
-  margin: 0 0 2vh 0;
+  margin: 0 0 1vh 0;
   position: relative;
 }
 
 .content-hobbies-item:before {
   content: '';
   position: absolute;
-  top: 0px;
+  top: 7px;
   left: -30px;
   display: block;
-  width: 20px;
-  height: 20px;
+  width: 10px;
+  height: 10px;
   background-color: #171b26;
   border-radius: 50%;
 }
@@ -368,8 +368,7 @@ body {
 
 .content-skills-item {
   list-style-type: none;
-  width: 50%;
-  margin: 0 0 2vh 0;
+  margin: 0.5vh 2vh;
 }
 
 .content-skills-item span {
