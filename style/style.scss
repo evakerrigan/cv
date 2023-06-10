@@ -887,13 +887,22 @@ strong {
 
 .certificate {
   background-color: #171b26;
-  padding: 2vh 5% 7vh 5%;
+  padding: 2vh 5% 3vh 5%;
+}
+.certificate-title {
+  color: #fff;
+  font-weight: 500;
+  font-size: 43px;
+  line-height: 55px;
+  letter-spacing: 6px;
+  text-align: center;
 }
 .certificate-item {
   list-style-type: none;
   width: 30%;
   margin: 0 0 3vh 0;
 }
+
 .certificate-description {
   color: #888;
   padding: 10px 0 0 0;
@@ -908,6 +917,20 @@ strong {
 .certificate-link:hover {
   color: #aaa;
   text-decoration: none;
+}
+
+@media (max-width: 650px) {
+  .certificate-item {
+    width: 40%;
+  }
+}
+@media (max-width: 400px) {
+  .certificate-item {
+    font-size: 12px;
+  }
+  .certificate-title {
+    font-size: 37px;
+  }
 }
 
 /******************** arrow-down button ********************/
