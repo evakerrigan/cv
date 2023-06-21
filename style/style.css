@@ -281,10 +281,45 @@ body {
   .header-menu-item {
     width: auto;
     margin: 7px 0;
+    text-align: right;
   }
   .header-title {
     margin: 2vh 0 0 0;
     line-height: 55px;
+  }
+}
+
+/******************** change nav header ********************/
+.header-menu.sticky-header {
+  background-color: #212530;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  display: block;
+}
+
+.sticky-header .header-menu-list {
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  padding: 20px 0;
+  margin: 0;
+}
+
+.sticky-header .header-menu-item {
+  width: auto;
+}
+
+.header-menu {
+  display: none;
+}
+
+@media (max-width: 960px) {
+  .header-menu.sticky-header {
+    display: none;
+  }
+  .header-menu {
+    display: block;
   }
 }
 
