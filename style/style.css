@@ -296,6 +296,7 @@ body {
   position: sticky;
   top: 0;
   display: block;
+  border-bottom: 1px solid;
 }
 
 .sticky-header .header-menu-list {
