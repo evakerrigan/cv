@@ -201,6 +201,10 @@ body {
   line-height: 30px;
 }
 
+.header-contacts-link:hover {
+  color: #fff;
+}
+
 @media (max-width: 1080px) {
   .header-contacts-link {
     font-size: 17px;
