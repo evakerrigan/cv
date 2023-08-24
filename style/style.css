@@ -1,5 +1,8 @@
+@charset "UTF-8";
 /******************** reset ********************/
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -16,12 +19,15 @@ h1 {
 
 /******************** base ********************/
 body {
-  font-family: 'Poppins', sans-serif;
+  /* font-family: 'Poppins', sans-serif; */
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .all-wrapper {
   max-width: 1280px;
-  min-width: 700px;
+  min-width: 320px;
   margin: 0 auto;
   background-color: #f2f9fb;
 }
@@ -95,6 +101,19 @@ body {
           align-items: center;
 }
 
+@media (max-width: 767px) {
+  .wrapper {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .left-block {
+    width: 100%;
+  }
+  .right-block {
+    width: 100%;
+  }
+}
+
 /******************** header ********************/
 .header {
   background-color: #171b26;
@@ -106,6 +125,10 @@ body {
   margin: 12vh 0 0 0;
 }
 
+.photo-block {
+  display: none;
+}
+
 .header-menu-list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -113,10 +136,14 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .header-menu-item {
   list-style-type: none;
+  width: 25%;
+  margin: 0 0 10px 0;
 }
 
 .header-menu-link {
@@ -174,6 +201,10 @@ body {
   line-height: 30px;
 }
 
+.header-contacts-link:hover {
+  color: #fff;
+}
+
 @media (max-width: 1080px) {
   .header-contacts-link {
     font-size: 17px;
@@ -209,6 +240,94 @@ body {
   }
 }
 
+@media (max-width: 950px) {
+  .header-menu-list {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .header-menu-item {
+    width: 30%;
+    margin: 7px 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .header {
+    padding: 20px 0 0 0;
+  }
+  .header-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .photo-block {
+    display: block;
+  }
+  .header-img-mini {
+    width: 80%;
+    max-width: 320px;
+    margin: 0 0 0 0;
+  }
+  .header .left-block {
+    display: none;
+  }
+  .header-menu-list {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
+  .header-menu-item {
+    width: auto;
+    margin: 7px 0;
+    text-align: right;
+  }
+  .header-title {
+    margin: 2vh 0 0 0;
+    line-height: 55px;
+  }
+}
+
+/******************** change nav header ********************/
+.header-menu.sticky-header {
+  background-color: #212530;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  display: block;
+  border-bottom: 1px solid;
+}
+
+.sticky-header .header-menu-list {
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  padding: 20px 0;
+  margin: 0;
+}
+
+.sticky-header .header-menu-item {
+  width: auto;
+}
+
+.header-menu {
+  display: none;
+}
+
+@media (max-width: 960px) {
+  .header-menu.sticky-header {
+    display: none;
+  }
+  .header-menu {
+    display: block;
+  }
+}
+
 /******************** main content ********************/
 .content {
   color: #555;
@@ -236,20 +355,20 @@ body {
 }
 
 .content-hobbies-item {
-  font-weight: 500;
+  font-weight: 400;
   font-size: 20px;
-  margin: 0 0 2vh 0;
+  margin: 0 0 1vh 0;
   position: relative;
 }
 
 .content-hobbies-item:before {
   content: '';
   position: absolute;
-  top: 0px;
+  top: 7px;
   left: -30px;
   display: block;
-  width: 20px;
-  height: 20px;
+  width: 10px;
+  height: 10px;
   background-color: #171b26;
   border-radius: 50%;
 }
@@ -293,8 +412,7 @@ body {
 
 .content-skills-item {
   list-style-type: none;
-  width: 50%;
-  margin: 0 0 2vh 0;
+  margin: 0.5vh 2vh;
 }
 
 .content-skills-item span {
@@ -318,11 +436,6 @@ body {
   font-weight: 300;
   font-size: 20px;
   line-height: 32px;
-}
-.portfolio p {
-  color: #fff;
-  font-size: 30px;
-  text-align: center;
 }
 
 @media (max-width: 1080px) {
@@ -380,10 +493,57 @@ body {
   }
 }
 
+@media (max-width: 767px) {
+  .left-block {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  .left-block-strip {
+    width: 100%;
+    margin: 0;
+  }
+  .content-hobbies-item {
+    margin: 0;
+  }
+}
+
 /******************** portfolio ********************/
 .portfolio {
   background-color: #171b26;
-  padding: 2vh 5% 1vh 5%;
+  padding: 2vh 5% 7vh 5%;
+}
+
+.portfolio-button {
+  background-color: transparent;
+  cursor: pointer;
+  color: #888;
+  border: 1px solid #888;
+  outline: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin: 0 auto;
+  display: block;
+  width: 150px;
+  text-align: center;
+}
+
+.arrow.down {
+  border-top: 3px solid #888;
+  border-right: 3px solid #888;
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+.portfolio-button:hover {
+  color: #fff;
+}
+
+.portfolio-button:hover .arrow.down {
+  border-top: 3px solid #fff;
+  border-right: 3px solid #fff;
 }
 
 .portfolio-title {
@@ -403,6 +563,7 @@ body {
       justify-content: space-around;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  margin-top: 30px;
 }
 
 .portfolio-item {
@@ -413,11 +574,33 @@ body {
 
 .portfolio-img {
   width: 100%;
+  -webkit-box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+          box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.portfolio p {
+  color: #fff;
+  font-size: 30px;
+  text-align: center;
+}
+
+.portfolio-description {
+  color: #888;
+  padding: 10px 0 0 0;
+}
+
+@media (max-width: 767px) {
+  .portfolio-item {
+    width: 80%;
+  }
+  .portfolio-title {
+    line-height: 55px;
+  }
 }
 
 /******************** footer ********************/
 .footer {
-  background-color: #aaa;
+  background-color: #171b26;
   color: #fff;
   padding: 1vh 5%;
 }
@@ -441,6 +624,396 @@ body {
 @media (max-width: 850px) {
   .footer-github-link {
     font-size: 17px;
+  }
+}
+
+/******************** resume ********************/
+.row:before,
+.row:after {
+  display: table;
+  content: " ";
+}
+
+.row:after {
+  clear: both;
+}
+
+.row:before,
+.row:after {
+  display: table;
+  content: " ";
+}
+
+.row:after {
+  clear: both;
+}
+
+.resume p {
+  color: #a9a9a9;
+}
+
+.resume a {
+  color: #a9a9a9;
+}
+
+.resume a:hover {
+  text-decoration: none;
+}
+
+.resume a > p:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+#resume img {
+  width: 100%;
+}
+
+.b-resume {
+  color: #000;
+  background: #fff;
+  width: 100%;
+  margin: 0 auto;
+  padding: 10%;
+  -webkit-box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+          box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.b-resume-wrapper {
+  padding: 5% 0;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.b-resume-main-title:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.b-resume-contacts {
+  margin-top: 3%;
+}
+
+.b-resume-title {
+  width: 210px;
+  float: right;
+  text-align: right;
+  font-size: 15px;
+}
+
+.b-resume-photo {
+  width: 100%;
+  padding: 5% 10%;
+}
+
+.b-resume-name {
+  padding: 24px 0 27px 0;
+  font-size: 18px;
+}
+
+.b-resume-info {
+  color: #000;
+}
+
+.b-resume-info span {
+  font-weight: 500;
+}
+
+.b-resume-info a {
+  color: #00afea;
+}
+
+.b-resume-info a:hover {
+  border-bottom: 1px solid #00afea;
+}
+
+.b-resume-education {
+  margin-top: 3%;
+}
+
+.b-resume-education li {
+  font-size: 13px;
+}
+
+.b-resume-work {
+  margin-top: 3%;
+}
+
+.b-resume-work-title span {
+  font-size: 15px;
+}
+
+.b-resume-work li {
+  font-size: 13px;
+}
+
+.b-resume-merit {
+  margin-top: 3%;
+}
+
+.b-resume-merit-title span {
+  font-size: 15px;
+}
+
+.b-resume-skills {
+  margin-top: 3%;
+}
+
+.b-resume-skills-title span {
+  font-size: 15px;
+}
+
+.b-resume-skills-title span {
+  font-size: 15px;
+}
+
+.b-resume-skills span {
+  font-size: 15px;
+}
+
+.b-resume-skills-table {
+  margin-left: 6%;
+}
+
+.b-resume-skills-table td:last-child {
+  padding-left: 40px;
+}
+
+.b-resume-contacts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: no-wrap;
+      flex-wrap: no-wrap;
+}
+
+.resume-photo {
+  max-width: 238px;
+  margin: 0 30px 30px 30px;
+}
+
+.resume-list {
+  list-style-type: none;
+}
+
+.resume-item {
+  margin: 0px 0;
+  font-size: 14px;
+  line-height: 1.428571429;
+}
+
+.resume-link {
+  text-decoration: none;
+}
+
+.resume-link:hover {
+  color: #00afea;
+}
+
+strong {
+  font-size: 14px;
+  line-height: 1.428571429;
+  font-weight: bold;
+}
+
+.resume-image {
+  display: none;
+}
+
+.resume-html {
+  display: block;
+}
+
+.button_download a {
+  padding: 9px 25px 12px 25px;
+  color: #a9a9a9;
+  display: block;
+  font-style: italic;
+}
+
+.button_download {
+  background-color: #045369;
+}
+
+.button_download a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+@media (max-width: 830px) {
+  .resume-image {
+    display: block;
+  }
+  .resume-html {
+    display: none;
+  }
+}
+
+/******************** back-to-top ********************/
+.back-to-top {
+  position: fixed;
+  bottom: -60px;
+  right: 10px;
+  width: 50px;
+  height: 50px;
+  background-color: #f2f9fb;
+  cursor: pointer;
+  -webkit-transition: 0.4s linear;
+  transition: 0.4s linear;
+  border: 2px solid #171b26;
+  padding-top: 18px;
+}
+
+.back-to-top:hover {
+  background-color: #8b8d9b;
+}
+
+.back-to-top.active {
+  bottom: 10px;
+}
+
+.arrow {
+  width: 20px;
+  height: 20px;
+  border-top: 3px solid #171b26;
+  border-right: 3px solid #171b26;
+  margin: 0 auto;
+  text-align: center;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.arrow.down {
+  border-top: 3px solid #888;
+  border-right: 3px solid #888;
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+}
+
+/******************** testwork ********************/
+.testwork-title {
+  color: #161b25;
+  font-weight: 700;
+  font-size: 43px;
+  line-height: 80px;
+  letter-spacing: 6px;
+  text-align: center;
+}
+
+.testwork-link {
+  font-weight: 400;
+  font-size: 18px;
+  color: #555;
+}
+
+.testwork-link:hover {
+  color: #aaa;
+  text-decoration: none;
+}
+
+/******************** certificate ********************/
+.certificate {
+  background-color: #171b26;
+  padding: 2vh 5% 3vh 5%;
+}
+
+.certificate-title {
+  color: #fff;
+  font-weight: 500;
+  font-size: 43px;
+  line-height: 55px;
+  letter-spacing: 6px;
+  text-align: center;
+}
+
+.certificate-item {
+  list-style-type: none;
+  width: 30%;
+  margin: 0 0 3vh 0;
+}
+
+.certificate-description {
+  color: #888;
+  padding: 10px 0 0 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.certificate-link {
+  color: #aaa;
+}
+
+.certificate-link:hover {
+  color: #aaa;
+  text-decoration: none;
+}
+
+@media (max-width: 650px) {
+  .certificate-item {
+    width: 40%;
+  }
+}
+
+@media (max-width: 400px) {
+  .certificate-item {
+    font-size: 12px;
+  }
+  .certificate-title {
+    font-size: 37px;
+  }
+}
+
+/******************** arrow-down button ********************/
+/* скрываем чекбоксы и блоки с содержанием */
+.hide,
+.hide + label ~ ul {
+  display: none;
+}
+
+/* вид текста label */
+.hide + label,
+.hide:checked + label {
+  padding: 0;
+  cursor: pointer;
+}
+
+/* вид текста label при активном переключателе */
+.hide:checked + label .portfolio-button .arrow.down {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  margin-top: 10px;
+  margin-bottom: 0px;
+}
+
+/* когда чекбокс активен показываем блоки с содержанием  */
+.hide:checked + label + ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-animation: fade ease-in 1s;
+          animation: fade ease-in 1s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
 /*# sourceMappingURL=style.css.map */
