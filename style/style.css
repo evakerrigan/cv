@@ -551,7 +551,6 @@ body {
 
 .portfolio-img {
   width: 100%;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 .portfolio p {
@@ -573,6 +572,12 @@ body {
     line-height: 55px;
   }
 }
+/******************** text ********************/
+.portfolio-test-img {
+  width: 100%;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
 /******************** footer ********************/
 .footer {
   background-color: #171b26;
