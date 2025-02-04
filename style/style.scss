@@ -187,6 +187,7 @@ body {
   font-size: 20px;
   line-height: 30px;
 }
+
 .header-contacts-link:hover {
   color: #fff;
 }
@@ -299,14 +300,17 @@ body {
   display: block;
   border-bottom: 1px solid;
 }
+
 .sticky-header .header-menu-list {
   justify-content: space-evenly;
   padding: 20px 0;
   margin: 0;
 }
+
 .sticky-header .header-menu-item {
   width: auto;
 }
+
 .header-menu {
   display: none;
 }
@@ -315,6 +319,7 @@ body {
   .header-menu.sticky-header {
     display: none;
   }
+
   .header-menu {
     display: block;
   }
@@ -515,6 +520,33 @@ body {
 .portfolio {
   background-color: #171b26;
   padding: 2vh 5% 7vh 5%;
+}
+
+.portfolio-nda {
+  width: 100%;
+  height: 150px;
+  margin: 0 auto;
+  background-color: #ff8043;
+  font-family: "Caveat", cursive;
+  padding: 20px;
+}
+
+.portfolio-nda-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.portfolio-nda-icon {
+  width: 80px;
+  height: 80px;
+  display: block;
+}
+
+.portfolio-nda-text {
+  color: #fff;
+  line-height: 0px;
 }
 
 .portfolio-button {
@@ -926,6 +958,7 @@ strong {
   background-color: #171b26;
   padding: 2vh 5% 3vh 5%;
 }
+
 .certificate-title {
   color: #fff;
   font-weight: 500;
@@ -934,6 +967,7 @@ strong {
   letter-spacing: 6px;
   text-align: center;
 }
+
 .certificate-item {
   list-style-type: none;
   width: 30%;
@@ -961,10 +995,12 @@ strong {
     width: 40%;
   }
 }
+
 @media (max-width: 400px) {
   .certificate-item {
     font-size: 12px;
   }
+
   .certificate-title {
     font-size: 37px;
   }
