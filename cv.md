@@ -13,7 +13,6 @@ I'm a html-designer. My dream is to become a front-end developer.
 ## Skills: ##
 * HTML
 * CSS
-* Little js )
 * Adobe Photoshop
 * Git
 * Bootstrap
@@ -22,13 +21,9 @@ I'm a html-designer. My dream is to become a front-end developer.
 ` I don't know what to write here `
 
 ## Work experience: ## 
-2013-2016 web-developer. [My portfolio](http://kerrigan.su)
+
 
 ## Education: ## 
-* EPIC SKILLS, courses javascript
-* EPIC SKILLS, courses BEM
-* EPIC SKILLS, courses jQuery
-* EPIC SKILLS, courses PHP
 * Russian State Trade and Economic University, web-designer 
 * Microsoft, Windows server 2003 и active Directory
 * Kemerovo State University, Faculty of Physics
